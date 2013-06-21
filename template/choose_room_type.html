@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+	  <h2>{{hotel.hotelname}}</h2>
+	  <div>
+		  每次只能选择一个类型的房间
+	  </div>
+	  <hr />
+		{% for item in room_type_list %}
+		<form action="/booking/{{hotel.id}}/{{item.room_type}}/">
+		  <label>you can change the check_in or check_out date</label>
+		  <div>
+			  {{form.as_p}}
+			  <label>房间类型{{item.room_type}}</label>
+			  <label>每晚价格{{item.price}}</label>
+			  <label> 预定房间个数:<input type="text" name="room_num" /> </label>
+		  </div>
+		  <input type="SUBMIT" name="SUBMIT" value="提交" />
+	 </form>
+	 <hr />
+	{% endfor %}
+  </body>
+</html>

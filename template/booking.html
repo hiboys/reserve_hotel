@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+	  <div>
+		  恭喜你,系统可以满足你的预订条件
+	  </div>
+	  <div>
+		  <div><h3>订单消息</h3></div>
+		  <div>预定hotel: {{hotel.hotelname}}</div>
+		  <div>预订房间类型:{{room_type}}</div>
+		  <div>预订房间个数:{{room_num}}</div>
+		  <div>每晚收费:{{room_price}}</div>
+	  </div>
+	  <hr />
+	  <label>请输入你的个人资料</label>
+	  <form action="/booked/">
+		  <div>
+				<label>姓:<input  type ="text" name="firstname"/></label>
+				<label>名: <input type ="text" name="lastname" /></label>
+		   </div>
+		   <div>
+			   <label>电话号码: <input type="text" name="phone" /></label>
+			</div>
+			<div>
+				<input type="SUBMIT" name="SUBMIT"  value="确认" />
+			</div>
+	  </form>
+  </body>
+</html>

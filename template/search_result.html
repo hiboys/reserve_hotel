@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+	  <h1>搜索结果</h1>
+	  	{% for hotel in result_list%}
+		<div style="border-color: gray; border-style: solid; border-width: 0px 0px 1px 0px; padding: 2px 0px 2px 0px; background-color: rgba(69,175,226,.25);	">
+			<label>hotelname:{{hotel.hotelname}}</label> <br />
+			<label>description:{{hotel.description}}</label> <br />
+			<label>starts:{{hotel.starts}}</label> <br />
+			<label><a href="/choose_room_type/{{hotel.id}}">continue</a></label>
+			<div style="clear: both;"></div>
+		</div>
+		{% endfor %}
+  </body>
+</html>
